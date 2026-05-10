@@ -1,7 +1,7 @@
 export type UserRole = 'buyer' | 'seller' | 'livreur' | 'admin';
 export type ProductPortee = 'local' | 'livrable';
 export type OrderStatus = 'pending' | 'confirmed' | 'shipped' | 'delivered' | 'cancelled';
-export type PaymentMethod = 'stripe' | 'orange_money' | 'airtel_money';
+export type PaymentMethod = 'stripe' | 'orange_money' | 'airtel_money' | 'm-pesa';
  
 export interface User {
   id: string;

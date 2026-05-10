@@ -20,7 +20,7 @@ export function Home() {
       {/* Features Section */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-12 text-center">Pourquoi ZANDO+</h2>
+          <h2 className="text-gray-500Q font-bold mb-12 text-center">Pourquoi ZANDO+</h2>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {/* Feature 1 */}
             <Card>
@@ -45,7 +45,7 @@ export function Home() {
               <CardContent className="pt-6 text-center">
                 <CreditCard className="w-12 h-12 mx-auto mb-4 text-accent" />
                 <h3 className="text-lg font-semibold mb-2">Paiement sécurisé</h3>
-                <p className="text-gray-600">Payez avec Stripe, Orange Money ou Airtel Money</p>
+                <p className="text-gray-600">Payez avec Stripe, Orange Money, Mpesa ou Airtel Money</p>
               </CardContent>
             </Card>
  

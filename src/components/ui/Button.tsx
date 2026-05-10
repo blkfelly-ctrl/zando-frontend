@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
 
 type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
-  variant?: "primary" | "secondary";
+  variant?: "primary" | "secondary" | "outline" | "default";
   size?: "sm" | "md" | "lg";
 };
 
@@ -22,8 +22,10 @@ export function Button({
       {...props}
       className={cn(
         "rounded font-semibold transition-colors",
-        variant === "primary" && "bg-blue-600 text-white hover:bg-blue-700",
-        variant === "secondary" && "bg-gray-200 text-gray-800 hover:bg-gray-300",
+        variant === "primary" && "bg-primary text-black hover:bg-yellow-600",
+        variant === "secondary" && "bg-secondary text-white hover:bg-green-700",
+        variant === "default" && "bg-blue-600 text-white hover:bg-blue-700",
+        variant === "outline" && "border border-gray-300 text-gray-700 hover:bg-gray-50",
         sizes[size],
         className
       )}

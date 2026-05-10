@@ -10,15 +10,16 @@
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "module": "ESNext",
-    "moduleResolution": "Node",
+    "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "baseUrl": "./src",
+    "ignoreDeprecations": "6.0",
+    "baseUrl": ".",
     "paths": {
-      "@/*": ["*"]
+      "@/*": ["./*"]
     }
   },
-  "include": ["src"]
+  "include": ["."]
 }

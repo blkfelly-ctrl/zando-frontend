@@ -71,7 +71,6 @@ export default defineConfig([
     },
   },
 ])
-```
-=======
+
 # zando-frontend
  81ea950c2fa00b8e20413cc1188bd715550379ad
