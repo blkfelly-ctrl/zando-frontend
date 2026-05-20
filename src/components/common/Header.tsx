@@ -1,21 +1,24 @@
+import { Link } from "react-router-dom";
+import { ShoppingCart, User, Menu, X } from "lucide-react";
+import { useState } from "react";
+import { Button } from "@/components/ui/Button";
 
-import { Link } from 'react-router-dom';
-import { ShoppingCart, User, Menu, X } from 'lucide-react';
-import { useState } from 'react';
-import { Button } from '@/components/ui/Button';
- 
-export function Header() {
+type HeaderProps = {
+  title?: string; // pour compatibilité avec Storybook
+  className?: string;
+};
+
+export function Header({ title = "ZANDO+", className }: HeaderProps) {
   const [isOpen, setIsOpen] = useState(false);
- 
+
   return (
-    <header className="bg-white shadow-sm sticky top-0 z-50">
+    <header className={`bg-white shadow-sm sticky top-0 z-50 ${className ?? ""}`}>
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         {/* Logo */}
-
         <Link to="/" className="text-2xl font-bold text-primary">
-          ZANDO+
+          {title}
         </Link>
- 
+
         {/* Navigation Desktop */}
         <nav className="hidden md:flex gap-8">
           <Link to="/products" className="text-gray-700 hover:text-primary transition">
@@ -28,7 +31,7 @@ export function Header() {
             Contact
           </Link>
         </nav>
- 
+
         {/* Actions */}
         <div className="hidden md:flex gap-4 items-center">
           <Link to="/cart">
@@ -39,13 +42,13 @@ export function Header() {
           </Link>
           <Button size="sm">Se connecter</Button>
         </div>
- 
+
         {/* Mobile Menu Button */}
         <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
           {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
       </div>
- 
+
       {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden bg-gray-50 border-t p-4 space-y-4">
